@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dream Places</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="main.html"><b>Justin</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="main.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="passion.html">Passion</a></li>
+          <li class="nav-item"><a class="nav-link" href="music.html">Favorite Music</a></li>
+          <li class="nav-item"><a class="nav-link" href="dream.html">Dream Places</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container py-5">
+      <h1>My Dream Places</h1>
+      <p>This is the dream places page.</p>
+
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="https://avgtravels.com/au/wp-content/uploads/sites/4/Cherry-Blossoms-Japan-AVG-Travels-scaled.jpg" class="card-img-top" alt="Paradise">
+            <div class="card-body">
+              <h5 class="card-title">Japan</h5>
+              <p class="card-text">Japan is a country I've always wanted to visit. The blend of traditional culture and modern technology is fascinating.</p>
+              <a href="#" class="btn btn-primary">Visit Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="https://www.outlooktravelmag.com/media/bali-1-1679062958.profileImage.2x-1536x884.webp" class="card-img-top" alt="Aphrodite">
+            <div class="card-body">
+              <h5 class="card-title">Bali, Indonesia</h5>
+              <p class="card-text">Bali is a tropical paradise known for its beautiful beaches, rich culture, and vibrant arts scene.</p>
+              <a href="#" class="btn btn-primary">Visit Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="https://media.cntraveler.com/photos/68cd85e471b51689b2902ff7/16:9/w_2992,h_1683,c_limit/091925-Best-Places-Netherlands-Rotterdam-GettyImages-984347524.jpg" class="card-img-top" alt="Skeletons - Keshi cover">
+            <div class="card-body">
+              <h5 class="card-title">Amsterdam, Netherlands</h5>
+              <p class="card-text">The Netherlands is known for its beautiful landscapes, cycling culture, and rich history.</p>
+              <a href="#" class="btn btn-primary">Visit Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      (function () {
+        const path = location.pathname.split('/').pop() || 'main.html';
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+          if (link.getAttribute('href') === path) {
+            link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

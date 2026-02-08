@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Favorite Music</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="main.html"><b>Justin</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="main.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="passion.html">Passion</a></li>
+          <li class="nav-item"><a class="nav-link" href="music.html">Favorite Music</a></li>
+          <li class="nav-item"><a class="nav-link" href="dream.html">Dream Places</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container py-5">
+      <h1>My Favorite Music</h1>
+      <p>This are my favorite tracks today.</p>
+
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShRbW41lrZQhy2bjj8o4QrG65yZ_GUtJ9_mA&s" class="card-img-top" alt="Paradise">
+            <div class="card-body">
+              <h5 class="card-title">Paradise — Chase Atlantic</h5>
+              <p class="card-text">Chase Atlantic's Paradise EP is a dreamy, atmospheric collection that blends indie pop with electronic influences.</p>
+              <a href="#" class="btn btn-primary">Listen</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFZas_CNT9xNzHQQz2bV2Bpx5dMi_DDxyf0g&s" class="card-img-top" alt="Aphrodite">
+            <div class="card-body">
+              <h5 class="card-title">Aphrodite - The Ridleys</h5>
+              <p class="card-text">The Ridleys' Aphrodite is a vibrant, synth-driven track that captures the essence of modern indie pop.</p>
+              <a href="#" class="btn btn-primary">Listen</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKS2rT_OfXCdDJD81YA5Zl4o-uWI-SC8u_zw&s" class="card-img-top" alt="Skeletons - Keshi cover">
+            <div class="card-body">
+              <h5 class="card-title">Skeletons - Keshi</h5>
+              <p class="card-text">Keshi's Skeletons is an introspective track that showcases his signature blend of pop and electronic elements.</p>
+              <a href="#" class="btn btn-primary">Listen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      (function () {
+        const path = location.pathname.split('/').pop() || 'main.html';
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+          if (link.getAttribute('href') === path) {
+            link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
